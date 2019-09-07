@@ -86,9 +86,7 @@ function init () {
 	});
 
 	image.src = "img/stick.png";
-	image.onload = function () {
-		setInterval(main, 1);
-	};
+	image.onload = main();
 };
 
 function main () {
@@ -99,6 +97,7 @@ function main () {
 	draw();
 
 	lastTime = now;
+	window.requestAnimationFrame(main);
 };
 
 function update (elapsed) {
