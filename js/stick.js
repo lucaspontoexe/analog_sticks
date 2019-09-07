@@ -43,17 +43,11 @@ class Stick {
 	}
 
 	setLimitXY(x, y) {
-		this.limit = {
-			x: x,
-			y: y
-		};
+		this.limit = {x, y};
 	}
 
 	setInputXY(x, y) {
-		this.input = {
-			x: x,
-			y: y
-		};
+		this.input = {x, y};
 	}
 
 	subtractVectors(v1, v2) {
