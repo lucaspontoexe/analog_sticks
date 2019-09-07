@@ -104,6 +104,9 @@ function main () {
 function update (elapsed) {
 	stick.update();
 
+	let coords = document.querySelector('#coords');
+	coords.innerText = JSON.stringify(stick.input);
+	
 	if (stick.active && (stick.length > threshold)) {
 		point.x += (
 			(stick.length * stick.normal.x)
